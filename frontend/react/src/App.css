@@ -18,6 +18,10 @@
   color: var(--colorBrandForeground1);
 }
 
+.offert-placeholder p {
+  color: var(--colorNeutralForeground2);
+}
+
 .offert-placeholder h1 {
   margin: 0;
 }
