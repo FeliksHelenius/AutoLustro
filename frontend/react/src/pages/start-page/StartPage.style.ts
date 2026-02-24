@@ -36,11 +36,23 @@ export const useStartPageClasses = makeStyles({
       alignItems: 'flex-start',
     },
   },
+  startBrandBlock: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '0.5rem',
+  },
   startLogo: {
     display: 'block',
     height: '2.25rem',
     width: 'auto',
     objectFit: 'contain',
+  },
+  startLogoText: {
+    fontFamily: serifFont,
+    fontSize: '1.5rem',
+    fontWeight: 600,
+    letterSpacing: '0.02em',
+    color: tokens.colorNeutralForeground1,
   },
   startHeroVideoWrap: {
     position: 'relative',
@@ -262,12 +274,24 @@ export const useStartPageClasses = makeStyles({
     color: tokens.colorNeutralForegroundInverted,
     margin: '0 0 0.5rem',
   },
+  startFooterBrandBlock: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: '0.5rem',
+    marginBottom: '0.5rem',
+  },
   startFooterLogo: {
     display: 'block',
     height: '1.5rem',
     width: 'auto',
-    margin: '0 auto 0.5rem',
     opacity: 0.9,
+  },
+  startFooterLogoText: {
+    fontFamily: serifFont,
+    fontSize: '1.125rem',
+    fontWeight: 600,
+    color: tokens.colorNeutralForegroundInverted,
   },
   startFooterLegal: {
     fontSize: '0.8125rem',

@@ -24,8 +24,9 @@ export function StartPage() {
     <div className={c.startPage}>
       <header className={c.startHeader}>
         <div className={c.startHeaderInner}>
-          <Link to="/" aria-label="AutoLustro startsida">
-            <img src={smallLogoUrl} alt="AutoLustro" className={c.startLogo} />
+          <Link to="/" aria-label="AutoLustro startsida" className={c.startBrandBlock}>
+            <img src={smallLogoUrl} alt="" className={c.startLogo} />
+            <span className={c.startLogoText}>AutoLustro</span>
           </Link>
           <nav className={c.startNav}>
             <FluentLink href="#tjanster" appearance="subtle">
@@ -134,7 +135,10 @@ export function StartPage() {
 
       <footer className={c.startFooter}>
         <div className={c.startFooterInner}>
-          <img src={smallLogoUrl} alt="AutoLustro" className={c.startFooterLogo} />
+          <div className={c.startFooterBrandBlock}>
+            <img src={smallLogoUrl} alt="" className={c.startFooterLogo} />
+            <span className={c.startFooterLogoText}>AutoLustro</span>
+          </div>
           <Caption1 as="p" className={c.startFooterLegal}>
             Offert och pris bekräftas alltid innan arbete påbörjas. Personuppgifter hanteras enligt GDPR.
           </Caption1>
