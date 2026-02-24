@@ -76,6 +76,12 @@
   color: #fff !important;
 }
 
+.start-page a:has(.start-cta-nav),
+.start-page a:has(.start-cta) {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* Hero */
 .start-hero {
   background: var(--start-hero-bg);
@@ -152,6 +158,14 @@
   font-weight: 600;
   margin: 0 0 1.25rem;
   color: var(--start-text);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.start-section-icon {
+  font-size: 1.25rem;
+  color: var(--start-accent);
 }
 
 .start-service-list,

@@ -1,12 +1,22 @@
-import { BrowserRouter, Routes, Route } from 'react-router'
+import { BrowserRouter, Routes, Route, Link } from 'react-router'
+import { Title3, Body1, Button } from '@fluentui/react-components'
+import { DocumentTextRegular, HomeRegular } from '@fluentui/react-icons'
 import { StartPage } from './pages/StartPage'
 import './App.css'
 
 function OffertPlaceholder() {
   return (
-    <div style={{ padding: '3rem 1.5rem', textAlign: 'center', maxWidth: 600, margin: '0 auto' }}>
-      <h1 style={{ fontFamily: 'Cormorant Garamond, serif', marginBottom: '0.5rem' }}>Offertformulär</h1>
-      <p style={{ color: '#57534e' }}>Offertflödet med AI-bedömning kommer snart. Du kan redan nu kontakta oss via mejl eller telefon för en offert.</p>
+    <div className="offert-placeholder">
+      <DocumentTextRegular className="offert-placeholder-icon" />
+      <Title3 as="h1">Offertformulär</Title3>
+      <Body1 block>
+        Offertflödet med AI-bedömning kommer snart. Du kan redan nu kontakta oss via mejl eller telefon för en offert.
+      </Body1>
+      <Link to="/">
+        <Button appearance="secondary" icon={<HomeRegular />}>
+          Tillbaka till startsidan
+        </Button>
+      </Link>
     </div>
   )
 }
