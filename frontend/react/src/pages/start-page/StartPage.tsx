@@ -14,6 +14,9 @@ import {
   SparkleRegular,
 } from '@fluentui/react-icons'
 import { useStartPageClasses } from './StartPage.style'
+import fullLogoUrl from '../../assets/full-logo.png'
+import smallLogoUrl from '../../assets/small-logo.png'
+import rekondVideoUrl from '../../assets/rekond-1-1920_1080_30fps.mp4'
 
 export function StartPage() {
   const c = useStartPageClasses()
@@ -21,7 +24,9 @@ export function StartPage() {
     <div className={c.startPage}>
       <header className={c.startHeader}>
         <div className={c.startHeaderInner}>
-          <span className={c.startLogo}>AutoLustro</span>
+          <Link to="/" aria-label="AutoLustro startsida">
+            <img src={smallLogoUrl} alt="AutoLustro" className={c.startLogo} />
+          </Link>
           <nav className={c.startNav}>
             <FluentLink href="#tjanster" appearance="subtle">
               Tjänster
@@ -38,10 +43,20 @@ export function StartPage() {
         </div>
       </header>
 
-      <section className={c.startHero}>
-        <div className={c.startHeroInner}>
+      <section className={mergeClasses(c.startHero, c.startHeroVideoWrap)}>
+        <video
+          className={c.startHeroVideo}
+          src={rekondVideoUrl}
+          autoPlay
+          muted
+          loop
+          playsInline
+          aria-hidden
+        />
+        <div className={c.startHeroOverlay} aria-hidden />
+        <div className={mergeClasses(c.startHeroInner, c.startHeroContent)}>
           <p className={c.startHeroTagline}>Bilrekond med hantverk i fokus</p>
-          <h1 className={c.startHeroTitle}>AutoLustro</h1>
+          <img src={fullLogoUrl} alt="AutoLustro – Bilvård & Rekond" className={c.startHeroLogo} />
           <p className={c.startHeroDesc}>
             Ett familjeföretag inom bilrekond med över 20 års erfarenhet. Vi tar hand om hela bilens yttre och inre – från vardaglig tvätt till avancerad rekond som återställer djup glans och ett fräscht intryck.
           </p>
@@ -119,7 +134,7 @@ export function StartPage() {
 
       <footer className={c.startFooter}>
         <div className={c.startFooterInner}>
-          <p className={c.startFooterBrand}>AutoLustro</p>
+          <img src={smallLogoUrl} alt="AutoLustro" className={c.startFooterLogo} />
           <Caption1 as="p" className={c.startFooterLegal}>
             Offert och pris bekräftas alltid innan arbete påbörjas. Personuppgifter hanteras enligt GDPR.
           </Caption1>
